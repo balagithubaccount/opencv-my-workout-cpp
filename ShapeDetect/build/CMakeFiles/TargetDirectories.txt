@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/ShapeDetect/build/CMakeFiles/ShapeDet.dir
+/home/bxr02/Documents/Balasaravanan/ShapeDetect/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/ShapeDetect/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/FirstOpenCV/build/CMakeFiles/FirstCV.dir
+/home/bxr02/Documents/Balasaravanan/FirstOpenCV/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/FirstOpenCV/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/GassianBlur/build/CMakeFiles/GaussianBlur.dir
+/home/bxr02/Documents/Balasaravanan/GassianBlur/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/GassianBlur/build/CMakeFiles/rebuild_cache.dir
