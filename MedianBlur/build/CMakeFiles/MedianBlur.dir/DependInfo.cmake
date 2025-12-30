@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bxr02/Documents/Balasaravanan/MedianBlur/median_blur.cpp" "CMakeFiles/MedianBlur.dir/median_blur.cpp.o" "gcc" "CMakeFiles/MedianBlur.dir/median_blur.cpp.o.d"
+  "/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/MedianBlur/median_blur.cpp" "CMakeFiles/MedianBlur.dir/median_blur.cpp.o" "gcc" "CMakeFiles/MedianBlur.dir/median_blur.cpp.o.d"
   )
 
 # Targets to which this target links.

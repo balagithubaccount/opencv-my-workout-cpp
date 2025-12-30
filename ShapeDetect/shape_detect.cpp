@@ -4,7 +4,7 @@
 using namespace cv;
 using namespace std;
 
-int main(int argc, char **argv)
+int main(int argc, char* argv[])
 {
     // Step 1: Load the image
     // Mat img = imread("circle.png");
@@ -22,6 +22,7 @@ int main(int argc, char **argv)
         return -1;
     }
 
+    namedWindow("Original", WINDOW_NORMAL);
     imshow("Original", img);
 
     // Step 2: Convert to grayscale

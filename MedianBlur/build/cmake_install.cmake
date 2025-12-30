@@ -1,4 +1,4 @@
-# Install script for directory: /home/bxr02/Documents/Balasaravanan/MedianBlur
+# Install script for directory: /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/MedianBlur
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bxr02/Documents/Balasaravanan/MedianBlur/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/MedianBlur/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

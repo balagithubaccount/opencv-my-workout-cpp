@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bxr02/Documents/Balasaravanan/BoxFilter/box_filter.cpp" "CMakeFiles/BoxFilter.dir/box_filter.cpp.o" "gcc" "CMakeFiles/BoxFilter.dir/box_filter.cpp.o.d"
+  "/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/BoxFilter/box_filter.cpp" "CMakeFiles/BoxFilter.dir/box_filter.cpp.o" "gcc" "CMakeFiles/BoxFilter.dir/box_filter.cpp.o.d"
   )
 
 # Targets to which this target links.
