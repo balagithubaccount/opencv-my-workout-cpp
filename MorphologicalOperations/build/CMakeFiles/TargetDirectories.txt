@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/MorphologicalOperations/build/CMakeFiles/MorphOperation.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/MorphologicalOperations/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/MorphologicalOperations/build/CMakeFiles/rebuild_cache.dir

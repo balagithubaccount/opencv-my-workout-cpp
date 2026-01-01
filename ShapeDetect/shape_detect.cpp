@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 
         double peri = arcLength(contours[i], true);
         // approxPolyDP(contours[i], approx, 0.04 * peri, true);
-        approxPolyDP(contours[i], approx, 10, true);
+        approxPolyDP(contours[i], approx, 0.02 * peri, true);
 
         cout << "approx points: ";
         for (int j = 0; j < approx.size(); j++)
