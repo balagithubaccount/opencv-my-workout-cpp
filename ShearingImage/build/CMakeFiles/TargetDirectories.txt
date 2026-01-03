@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/ShearingImage/build/CMakeFiles/Shearing.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/ShearingImage/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/ShearingImage/build/CMakeFiles/rebuild_cache.dir

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bxr02/Documents/Balasaravanan/Practice
+CMAKE_SOURCE_DIR = /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bxr02/Documents/Balasaravanan/Practice/build
+CMAKE_BINARY_DIR = /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/Practice.dir/clean
 CMakeFiles/Practice.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Practice.dir/build.make CMakeFiles/Practice.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Practice.dir/build.make CMakeFiles/Practice.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bxr02/Documents/Balasaravanan/Practice/build/CMakeFiles --progress-num=1,2 "Built target Practice"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice/build/CMakeFiles --progress-num=1,2 "Built target Practice"
 .PHONY : CMakeFiles/Practice.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Practice.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/Practice/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Practice.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/Practice/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice/build/CMakeFiles 0
 .PHONY : CMakeFiles/Practice.dir/rule
 
 # Convenience name for target.

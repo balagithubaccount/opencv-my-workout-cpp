@@ -1,5 +1,5 @@
 CMakeFiles/Practice.dir/practice.cpp.o: \
- /home/bxr02/Documents/Balasaravanan/Practice/practice.cpp \
+ /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice/practice.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

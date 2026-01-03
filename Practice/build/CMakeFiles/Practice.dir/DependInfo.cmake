@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bxr02/Documents/Balasaravanan/Practice/practice.cpp" "CMakeFiles/Practice.dir/practice.cpp.o" "gcc" "CMakeFiles/Practice.dir/practice.cpp.o.d"
+  "/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Practice/practice.cpp" "CMakeFiles/Practice.dir/practice.cpp.o" "gcc" "CMakeFiles/Practice.dir/practice.cpp.o.d"
   )
 
 # Targets to which this target links.

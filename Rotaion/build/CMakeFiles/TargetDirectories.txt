@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Rotaion/build/CMakeFiles/Rotation.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Rotaion/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Rotaion/build/CMakeFiles/rebuild_cache.dir

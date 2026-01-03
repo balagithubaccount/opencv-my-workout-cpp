@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Scaling/build/CMakeFiles/Scale.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Scaling/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/Scaling/build/CMakeFiles/rebuild_cache.dir
