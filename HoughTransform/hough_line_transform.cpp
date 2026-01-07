@@ -26,11 +26,16 @@ int main()
 
     // Hough Transformation need to understand briefly.
     std::vector<Vec2f> lines;
-    HoughLines(edges, lines, 1, CV_PI/180, 150);
+    HoughLines(edges, lines, 1, CV_PI / 180, 150);
 
-    for (size_t i = 0; i < lines.size(); i++) {
+    // line(img, Point(0, 0), Point(img.rows / 2, img.cols / 2), Scalar(0, 0, 255), 2);
+
+    for (size_t i = 0; i < lines.size(); i++)
+    {
         float rho = lines[i][0];
         float theta = lines[i][1];
+
+        cout << "rho: " << rho << ", theta: " << theta << endl;
 
         double a = cos(theta), b = sin(theta);
         double x0 = a * rho, y0 = b * rho;
@@ -41,7 +46,7 @@ int main()
         pt2.x = cvRound(x0 - 1000 * (-b));
         pt2.y = cvRound(y0 - 1000 * (a));
 
-        line(img, pt1, pt2, Scalar(0,0,255), 2);
+        line(img, pt1, pt2, Scalar(0, 0, 255), 2);
     }
 
     imshow("Original Image", img);

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HoughLine.dir/hough_line_transform.cpp.o"
-  "CMakeFiles/HoughLine.dir/hough_line_transform.cpp.o.d"
+  "CMakeFiles/HoughLine.dir/hough_line_probability.cpp.o"
+  "CMakeFiles/HoughLine.dir/hough_line_probability.cpp.o.d"
   "HoughLine"
   "HoughLine.pdb"
 )

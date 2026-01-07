@@ -129,29 +129,29 @@ HoughLine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/build
 .PHONY : HoughLine/fast
 
-hough_line_transform.o: hough_line_transform.cpp.o
-.PHONY : hough_line_transform.o
+hough_line_probability.o: hough_line_probability.cpp.o
+.PHONY : hough_line_probability.o
 
 # target to build an object file
-hough_line_transform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/hough_line_transform.cpp.o
-.PHONY : hough_line_transform.cpp.o
+hough_line_probability.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/hough_line_probability.cpp.o
+.PHONY : hough_line_probability.cpp.o
 
-hough_line_transform.i: hough_line_transform.cpp.i
-.PHONY : hough_line_transform.i
+hough_line_probability.i: hough_line_probability.cpp.i
+.PHONY : hough_line_probability.i
 
 # target to preprocess a source file
-hough_line_transform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/hough_line_transform.cpp.i
-.PHONY : hough_line_transform.cpp.i
+hough_line_probability.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/hough_line_probability.cpp.i
+.PHONY : hough_line_probability.cpp.i
 
-hough_line_transform.s: hough_line_transform.cpp.s
-.PHONY : hough_line_transform.s
+hough_line_probability.s: hough_line_probability.cpp.s
+.PHONY : hough_line_probability.s
 
 # target to generate assembly for a file
-hough_line_transform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/hough_line_transform.cpp.s
-.PHONY : hough_line_transform.cpp.s
+hough_line_probability.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HoughLine.dir/build.make CMakeFiles/HoughLine.dir/hough_line_probability.cpp.s
+.PHONY : hough_line_probability.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HoughLine"
-	@echo "... hough_line_transform.o"
-	@echo "... hough_line_transform.i"
-	@echo "... hough_line_transform.s"
+	@echo "... hough_line_probability.o"
+	@echo "... hough_line_probability.i"
+	@echo "... hough_line_probability.s"
 .PHONY : help
 
 

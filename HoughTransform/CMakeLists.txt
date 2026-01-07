@@ -6,8 +6,8 @@ project(HoughLine)
 find_package(OpenCV REQUIRED)
 
 # Add the executable target
-add_executable(HoughLine hough_line_transform.cpp)
 # add_executable(HoughLine hough_line_transform.cpp)
+add_executable(HoughLine hough_line_probability.cpp)
 
 # Link the executable with the OpenCV Libraries
 target_link_libraries(HoughLine ${OpenCV_LIBS})
