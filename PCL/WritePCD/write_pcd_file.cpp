@@ -22,7 +22,7 @@ int main()
 
     pCloud.width = 10;
     pCloud.height = 1;
-    pCloud.is_dense = false;// revisit
+    pCloud.is_dense = false;
     pCloud.resize(pCloud.width * pCloud.height);
 
     for (auto &p : pCloud)
