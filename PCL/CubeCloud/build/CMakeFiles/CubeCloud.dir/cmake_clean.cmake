@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.o"
-  "CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.o.d"
+  "CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.o"
+  "CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.o.d"
   "CubeCloud"
   "CubeCloud.pdb"
 )

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/generate_cube_cloud.cpp" "CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.o" "gcc" "CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.o.d"
+  "/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pramid.cpp" "CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.o" "gcc" "CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.o.d"
   )
 
 # Targets to which this target links.

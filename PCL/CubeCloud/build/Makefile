@@ -129,29 +129,29 @@ CubeCloud/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/build
 .PHONY : CubeCloud/fast
 
-generate_cube_cloud.o: generate_cube_cloud.cpp.o
-.PHONY : generate_cube_cloud.o
+rgb_cube_pramid.o: rgb_cube_pramid.cpp.o
+.PHONY : rgb_cube_pramid.o
 
 # target to build an object file
-generate_cube_cloud.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.o
-.PHONY : generate_cube_cloud.cpp.o
+rgb_cube_pramid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.o
+.PHONY : rgb_cube_pramid.cpp.o
 
-generate_cube_cloud.i: generate_cube_cloud.cpp.i
-.PHONY : generate_cube_cloud.i
+rgb_cube_pramid.i: rgb_cube_pramid.cpp.i
+.PHONY : rgb_cube_pramid.i
 
 # target to preprocess a source file
-generate_cube_cloud.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.i
-.PHONY : generate_cube_cloud.cpp.i
+rgb_cube_pramid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.i
+.PHONY : rgb_cube_pramid.cpp.i
 
-generate_cube_cloud.s: generate_cube_cloud.cpp.s
-.PHONY : generate_cube_cloud.s
+rgb_cube_pramid.s: rgb_cube_pramid.cpp.s
+.PHONY : rgb_cube_pramid.s
 
 # target to generate assembly for a file
-generate_cube_cloud.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/generate_cube_cloud.cpp.s
-.PHONY : generate_cube_cloud.cpp.s
+rgb_cube_pramid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pramid.cpp.s
+.PHONY : rgb_cube_pramid.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CubeCloud"
-	@echo "... generate_cube_cloud.o"
-	@echo "... generate_cube_cloud.i"
-	@echo "... generate_cube_cloud.s"
+	@echo "... rgb_cube_pramid.o"
+	@echo "... rgb_cube_pramid.i"
+	@echo "... rgb_cube_pramid.s"
 .PHONY : help
 
 
