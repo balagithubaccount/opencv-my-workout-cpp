@@ -6,16 +6,14 @@ using namespace std;
 
 int main()
 {
-    float width = 1;
-    // cout << "Enter the Cube width: ";
-    // cin >> width;
+    float width = 1; // Square width.
 
-    int level;
+    int level; // Total number of rows in the Pyramid.
     cout << "Enter the Level: ";
     cin >> level;
 
-    float xyz[3];
-    int rgb[3] = {0, 255, 255};
+    float xyz[3];               // store the x,y,z co-ordinate values.
+    int rgb[3] = {255, 0, 255}; // store the RGB color with red, green and blue values the range (0 - 255).
 
     if (level <= 0)
     {
@@ -40,19 +38,25 @@ int main()
 
     cout << "cloud size: " << cloud.size() << endl;
 
+    // Create visualizer
+    pcl::visualization::PCLVisualizer viewer("Cube Viewer");
+    int lineInd = 0;
+    string lineId = to_string(lineInd);
+
     int index = 0;
     for (int row = 0; row < level; row++, temp_level--)
     {
         for (int cube = 1; cube <= temp_level; cube++)
         {
+            // set x, y and z coordinates values.
             xyz[0] = (width * cube) + ((width / 2) * (row));
             cerr << "row: " << row << ", cube: " << cube << ", x: " << xyz[0] << endl;
             xyz[1] = width * row;
             xyz[2] = 0;
 
-            rgb[0] += 40;
-            rgb[1] -= 40;
-            rgb[2] -= 42;
+            rgb[0] -= 1;
+            rgb[1] += 1;
+            rgb[2] -= 1;
 
             for (int box_2d = 0; box_2d < 2; box_2d++)
             {
@@ -77,6 +81,9 @@ int main()
                 cloud.points[index].b = rgb[1];
                 index++;
 
+                viewer.addLine(cloud.points[index - 2], cloud.points[index - 1], rgb[0], rgb[1], rgb[2], lineId);
+                lineId = to_string(++lineInd);
+
                 // top right y only changed, x and z unchanged.
                 xyz[1] += width;
                 cloud.points[index].x = xyz[0];
@@ -87,6 +94,9 @@ int main()
                 cloud.points[index].g = rgb[1];
                 cloud.points[index].b = rgb[1];
                 index++;
+
+                viewer.addLine(cloud.points[index - 2], cloud.points[index - 1], rgb[0], rgb[1], rgb[2], lineId);
+                lineId = to_string(++lineInd);
 
                 // top left x only changed, y and z unchanged.
                 xyz[0] -= width;
@@ -99,8 +109,20 @@ int main()
                 cloud.points[index].b = rgb[1];
                 index++;
 
+                viewer.addLine(cloud.points[index - 2], cloud.points[index - 1], rgb[0], rgb[1], rgb[2], lineId);
+                lineId = to_string(++lineInd);
+
+                viewer.addLine(cloud.points[index - 1], cloud.points[index - 4], rgb[0], rgb[1], rgb[2], lineId);
+                lineId = to_string(++lineInd);
+
                 xyz[1] -= width;
                 xyz[2] += width;
+            }
+
+            for (int connectLine = 1; connectLine <= 4; connectLine++)
+            {
+                viewer.addLine(cloud.points[index - connectLine], cloud.points[index - connectLine - 4], rgb[0], rgb[1], rgb[2], lineId);
+                lineId = to_string(++lineInd);
             }
         }
     }
@@ -113,21 +135,7 @@ int main()
     pcl::io::savePCDFileASCII("RGBCubeCloud.pcd", cloud);
     cout << "Cube Cloud Data saved." << endl;
 
-    pcl::visualization::PCLVisualizer viewer("Line Example");
-
-    viewer.addLine(cloud.points[0], cloud.points[1], "line 1");
-    viewer.addLine(cloud.points[1], cloud.points[2], "line 2");
-    viewer.addLine(cloud.points[2], cloud.points[3], "line 3");
-    viewer.addLine(cloud.points[3], cloud.points[4], "line 4");
-    viewer.addLine(cloud.points[4], cloud.points[4], "line 5");
-    viewer.addLine(cloud.points[5], cloud.points[6], "line 6");
-    viewer.addLine(cloud.points[6], cloud.points[7], "line 7");
-    viewer.addLine(cloud.points[7], cloud.points[8], "line 8");
-
-    while (!viewer.wasStopped())
-    {
-        viewer.spinOnce(10000);
-    }
+    viewer.spin();
 
     return 0;
 }
