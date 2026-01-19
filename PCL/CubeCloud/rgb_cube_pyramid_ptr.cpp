@@ -6,14 +6,14 @@ using namespace std;
 
 int main()
 {
-    float width = 1; // Square width.
+    float width = 5; // Square width.
 
     int level; // Total number of rows in the Pyramid.
     cout << "Enter the Level: ";
     cin >> level;
 
-    float xyz[3];               // store the x,y,z co-ordinate values.
-    int rgb[3] = {255, 0, 255}; // store the RGB color with red, green and blue values the range (0 - 255).
+    static float xyz[3];        // store the x,y,z co-ordinate values.
+    int rgb[3] = {0, 127, 255}; // store the RGB color with red, green and blue values the range (0 - 255).
 
     if (level <= 0)
     {
@@ -39,103 +39,130 @@ int main()
     cout << "cloudPtr size: " << cloudPtr->size() << endl;
 
     // Create visualizer
-    // pcl::visualization::PCLVisualizer viewer("Cube Viewer");
-    // int lineInd = 0;
-    // string lineId = to_string(lineInd);
+    pcl::visualization::PCLVisualizer viewer("Cube Viewer");
+    int lineInd = 0;
+    string lineId = to_string(lineInd);
 
-    // int index = 0;
-    // for (int row = 0; row < level; row++, temp_level--)
-    // {
-    //     for (int cube = 1; cube <= temp_level; cube++)
-    //     {
-    //         // set x, y and z coordinates values.
-    //         xyz[0] = (width * cube) + ((width / 2) * (row));
-    //         cerr << "row: " << row << ", cube: " << cube << ", x: " << xyz[0] << endl;
-    //         xyz[1] = width * row;
-    //         xyz[2] = 0;
+    int col_r, col_g, col_b;
+    col_r = 35;
+    col_g = 50;
+    col_b = -10;
 
-    //         rgb[0] -= 1;
-    //         rgb[1] += 1;
-    //         rgb[2] -= 1;
+    int index = 0;
+    for (int row = 0; row < level; row++, temp_level--)
+    {
+        cout << "Color r: " << rgb[0] << ", g: " << rgb[1] << ", b: " << rgb[2] << endl;
+        float horiz_x = ((width / 2) * (row));
 
-    //         for (int box_2d = 0; box_2d < 2; box_2d++)
-    //         {
-    //             // bottom left(origit). starting coordinates for x,y,z like origin.(0,0,0)
-    //             cloud.points[index].x = xyz[0];
-    //             cloud.points[index].y = xyz[1];
-    //             cloud.points[index].z = xyz[2];
+        for (int cube = 1; cube <= temp_level; cube++)
+        {
+            // set x, y and z coordinates values.
+            xyz[0] = (width * cube) + horiz_x;
+            cerr << "row: " << row << ", cube: " << cube << ", x: " << xyz[0] << endl;
+            xyz[1] = width * row;
+            xyz[2] = 0;
 
-    //             cloud.points[index].r = rgb[0];
-    //             cloud.points[index].g = rgb[1];
-    //             cloud.points[index].b = rgb[1];
-    //             index++;
+            for (int box_2d = 0; box_2d < 2; box_2d++)
+            {
+                // bottom left(origit). starting coordinates for x,y,z like origin.(0,0,0)
+                cloudPtr->points[index].x = xyz[0];
+                cloudPtr->points[index].y = xyz[1];
+                cloudPtr->points[index].z = xyz[2];
 
-    //             // next point bottom right x only changed, y and z unchanged.
-    //             xyz[0] += width;
-    //             cloud.points[index].x = xyz[0];
-    //             cloud.points[index].y = xyz[1];
-    //             cloud.points[index].z = xyz[2];
+                cloudPtr->points[index].r = rgb[0];
+                cloudPtr->points[index].g = rgb[1];
+                cloudPtr->points[index].b = rgb[2];
+                index++;
 
-    //             cloud.points[index].r = rgb[0];
-    //             cloud.points[index].g = rgb[1];
-    //             cloud.points[index].b = rgb[1];
-    //             index++;
+                // next point bottom right x only changed, y and z unchanged.
+                xyz[0] += width;
+                cloudPtr->points[index].x = xyz[0];
+                cloudPtr->points[index].y = xyz[1];
+                cloudPtr->points[index].z = xyz[2];
 
-    //             viewer.addLine(cloud.points[index - 2], cloud.points[index - 1], rgb[0], rgb[1], rgb[2], lineId);
-    //             lineId = to_string(++lineInd);
+                cloudPtr->points[index].r = rgb[0];
+                cloudPtr->points[index].g = rgb[1];
+                cloudPtr->points[index].b = rgb[2];
+                index++;
 
-    //             // top right y only changed, x and z unchanged.
-    //             xyz[1] += width;
-    //             cloud.points[index].x = xyz[0];
-    //             cloud.points[index].y = xyz[1];
-    //             cloud.points[index].z = xyz[2];
+                viewer.addLine(cloudPtr->points[index - 2], cloudPtr->points[index - 1], rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, lineId);
+                lineId = to_string(++lineInd);
 
-    //             cloud.points[index].r = rgb[0];
-    //             cloud.points[index].g = rgb[1];
-    //             cloud.points[index].b = rgb[1];
-    //             index++;
+                // top right y only changed, x and z unchanged.
+                xyz[1] += width;
+                cloudPtr->points[index].x = xyz[0];
+                cloudPtr->points[index].y = xyz[1];
+                cloudPtr->points[index].z = xyz[2];
 
-    //             viewer.addLine(cloud.points[index - 2], cloud.points[index - 1], rgb[0], rgb[1], rgb[2], lineId);
-    //             lineId = to_string(++lineInd);
+                cloudPtr->points[index].r = rgb[0];
+                cloudPtr->points[index].g = rgb[1];
+                cloudPtr->points[index].b = rgb[2];
+                index++;
 
-    //             // top left x only changed, y and z unchanged.
-    //             xyz[0] -= width;
-    //             cloud.points[index].x = xyz[0];
-    //             cloud.points[index].y = xyz[1];
-    //             cloud.points[index].z = xyz[2];
+                viewer.addLine(cloudPtr->points[index - 2], cloudPtr->points[index - 1], rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, lineId);
+                lineId = to_string(++lineInd);
 
-    //             cloud.points[index].r = rgb[0];
-    //             cloud.points[index].g = rgb[1];
-    //             cloud.points[index].b = rgb[1];
-    //             index++;
+                // top left x only changed, y and z unchanged.
+                xyz[0] -= width;
+                cloudPtr->points[index].x = xyz[0];
+                cloudPtr->points[index].y = xyz[1];
+                cloudPtr->points[index].z = xyz[2];
 
-    //             viewer.addLine(cloud.points[index - 2], cloud.points[index - 1], rgb[0], rgb[1], rgb[2], lineId);
-    //             lineId = to_string(++lineInd);
+                cloudPtr->points[index].r = rgb[0];
+                cloudPtr->points[index].g = rgb[1];
+                cloudPtr->points[index].b = rgb[2];
+                index++;
 
-    //             viewer.addLine(cloud.points[index - 1], cloud.points[index - 4], rgb[0], rgb[1], rgb[2], lineId);
-    //             lineId = to_string(++lineInd);
+                viewer.addLine(cloudPtr->points[index - 2], cloudPtr->points[index - 1], rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, lineId);
+                lineId = to_string(++lineInd);
 
-    //             xyz[1] -= width;
-    //             xyz[2] += width;
-    //         }
+                viewer.addLine(cloudPtr->points[index - 1], cloudPtr->points[index - 4], rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, lineId);
+                lineId = to_string(++lineInd);
 
-    //         for (int connectLine = 1; connectLine <= 4; connectLine++)
-    //         {
-    //             viewer.addLine(cloud.points[index - connectLine], cloud.points[index - connectLine - 4], rgb[0], rgb[1], rgb[2], lineId);
-    //             lineId = to_string(++lineInd);
-    //         }
-    //     }
-    // }
+                xyz[1] -= width;
+                xyz[2] += width;
+            }
 
-    // for (const auto &p : cloud)
-    // {
-    //     cout << "x: " << p.x << ", y: " << p.y << ", z: " << p.z << endl;
-    // }
+            for (int connectLine = 1; connectLine <= 4; connectLine++)
+            {
+                viewer.addLine(cloudPtr->points[index - connectLine], cloudPtr->points[index - connectLine - 4], rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, lineId);
+                lineId = to_string(++lineInd);
+            }
+        }
 
-    // pcl::io::savePCDFileASCII("RGBCubeCloud.pcd", cloud);
-    // cout << "Cube Cloud Data saved." << endl;
+        col_r = (rgb[0] + col_r < 0 || rgb[0] < 0) ? 35 : (rgb[0] + col_r > 255 || rgb[0] > 255) ? -35
+                                                                                                 : col_r;
+        col_g = (rgb[1] + col_g < 0 || rgb[1] < 0) ? 50 : (rgb[1] + col_g > 255 || rgb[1] > 255) ? -50
+                                                                                                 : col_g;
+        col_b = (rgb[2] + col_b < 0 || rgb[2] < 0) ? 10 : (rgb[2] + col_b > 255 || rgb[2] > 255) ? -10
+                                                                                                 : col_b;
 
-    // viewer.spin();
+        rgb[0] += col_r;
+        rgb[1] += col_g;
+        rgb[2] += col_b;
+    }
+
+    for (const auto &p : *cloudPtr)
+    {
+        cout << "x: " << p.x << ", y: " << p.y << ", z: " << p.z << endl;
+    }
+
+    pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb_handler(cloudPtr);
+    viewer.addPointCloud<pcl::PointXYZRGB>(cloudPtr, rgb_handler, "cloud_ptr");
+
+    // Set width for each line.
+    for (int index = 0; index < lineInd; index++)
+    {
+        viewer.setShapeRenderingProperties(pcl::visualization::PCL_VISUALIZER_LINE_WIDTH, 4.0, to_string(index));
+    }
+
+    // Set size for Point Cloud Data.
+    viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 8, "cloud_ptr");
+
+    pcl::io::savePCDFileASCII("RGBCubeCloud.pcd", *cloudPtr);
+    cout << "Cube Cloud Data saved." << endl;
+
+    viewer.spin();
 
     return 0;
 }

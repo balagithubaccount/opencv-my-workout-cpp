@@ -129,29 +129,29 @@ CubeCloud/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/build
 .PHONY : CubeCloud/fast
 
-rgb_cube_pyramid_ptr.o: rgb_cube_pyramid_ptr.cpp.o
-.PHONY : rgb_cube_pyramid_ptr.o
+rgb_cube_pyramid_points.o: rgb_cube_pyramid_points.cpp.o
+.PHONY : rgb_cube_pyramid_points.o
 
 # target to build an object file
-rgb_cube_pyramid_ptr.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_ptr.cpp.o
-.PHONY : rgb_cube_pyramid_ptr.cpp.o
+rgb_cube_pyramid_points.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o
+.PHONY : rgb_cube_pyramid_points.cpp.o
 
-rgb_cube_pyramid_ptr.i: rgb_cube_pyramid_ptr.cpp.i
-.PHONY : rgb_cube_pyramid_ptr.i
+rgb_cube_pyramid_points.i: rgb_cube_pyramid_points.cpp.i
+.PHONY : rgb_cube_pyramid_points.i
 
 # target to preprocess a source file
-rgb_cube_pyramid_ptr.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_ptr.cpp.i
-.PHONY : rgb_cube_pyramid_ptr.cpp.i
+rgb_cube_pyramid_points.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.i
+.PHONY : rgb_cube_pyramid_points.cpp.i
 
-rgb_cube_pyramid_ptr.s: rgb_cube_pyramid_ptr.cpp.s
-.PHONY : rgb_cube_pyramid_ptr.s
+rgb_cube_pyramid_points.s: rgb_cube_pyramid_points.cpp.s
+.PHONY : rgb_cube_pyramid_points.s
 
 # target to generate assembly for a file
-rgb_cube_pyramid_ptr.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_ptr.cpp.s
-.PHONY : rgb_cube_pyramid_ptr.cpp.s
+rgb_cube_pyramid_points.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CubeCloud.dir/build.make CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.s
+.PHONY : rgb_cube_pyramid_points.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CubeCloud"
-	@echo "... rgb_cube_pyramid_ptr.o"
-	@echo "... rgb_cube_pyramid_ptr.i"
-	@echo "... rgb_cube_pyramid_ptr.s"
+	@echo "... rgb_cube_pyramid_points.o"
+	@echo "... rgb_cube_pyramid_points.i"
+	@echo "... rgb_cube_pyramid_points.s"
 .PHONY : help
 
 
