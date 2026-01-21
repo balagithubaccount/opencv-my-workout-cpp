@@ -69,28 +69,28 @@ include CMakeFiles/CubeCloud.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CubeCloud.dir/flags.make
 
-CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o: CMakeFiles/CubeCloud.dir/flags.make
-CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o: ../rgb_cube_pyramid_points.cpp
-CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o: CMakeFiles/CubeCloud.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o -MF CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o.d -o CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o -c /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pyramid_points.cpp
+CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o: CMakeFiles/CubeCloud.dir/flags.make
+CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o: ../rgb_cube_pyramid_points_ptr.cpp
+CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o: CMakeFiles/CubeCloud.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o -MF CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o.d -o CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o -c /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pyramid_points_ptr.cpp
 
-CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pyramid_points.cpp > CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.i
+CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pyramid_points_ptr.cpp > CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.i
 
-CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pyramid_points.cpp -o CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.s
+CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/CubeCloud/rgb_cube_pyramid_points_ptr.cpp -o CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.s
 
 # Object files for target CubeCloud
 CubeCloud_OBJECTS = \
-"CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o"
+"CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o"
 
 # External object files for target CubeCloud
 CubeCloud_EXTERNAL_OBJECTS =
 
-CubeCloud: CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points.cpp.o
+CubeCloud: CMakeFiles/CubeCloud.dir/rgb_cube_pyramid_points_ptr.cpp.o
 CubeCloud: CMakeFiles/CubeCloud.dir/build.make
 CubeCloud: /usr/lib/x86_64-linux-gnu/libpcl_apps.so
 CubeCloud: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so
