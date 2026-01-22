@@ -402,20 +402,24 @@ int main()
     cout << "Cube Cloud Data saved." << endl;
 
     // Create visualizer
-    pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("3D Cube"));
+    // pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("3D Cube"));
+    pcl::visualization::PCLVisualizer viewer("3D Cube");
 
-    // pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb_hander(cloud);
-    viewer->addPointCloud<pcl::PointXYZRGB>(cloud, "cubecloud");
+    // viewer->addPointCloud<pcl::PointXYZRGB>(cloud, "cubecloud");
+    viewer.addPointCloud<pcl::PointXYZRGB>(cloud, "cubecloud");
 
     // Set point size for Point Cloud Points.
-    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cubecloud");
+    // viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cubecloud");
+    viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cubecloud");
 
-    viewer->registerPointPickingCallback(pointPickingCallback);
+    // viewer->registerPointPickingCallback(pointPickingCallback);
+    viewer.registerPointPickingCallback(pointPickingCallback);
 
     cout << "\n*** INSTRUCTIONS ***" << std::endl;
     cout << "1. Shift + Click on any point to select it" << std::endl;
 
-    viewer->spin();
+    // viewer->spin();
+    viewer.spin();
     // while (!viewer->wasStopped())
     // {
     //     viewer->spinOnce(100);
