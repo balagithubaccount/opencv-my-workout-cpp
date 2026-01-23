@@ -4,10 +4,12 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include <vector>
 #include <cmath>
+#include <vtkObject.h>
 using namespace std;
 
 static float cubeWidth;
 vector<pcl::PointXYZ> selectedPoints;
+pcl::visualization::PCLVisualizer::Ptr viewer;
 
 // For make line with point between start and end point.(18 points)
 void addPointsToEdge(const pcl::PointXYZRGB startPoint, const pcl::PointXYZRGB endPoint, const char &fieldName,
@@ -140,12 +142,11 @@ void pointPickingCallback(const pcl::visualization::PointPickingEvent &event)
 
     // Create a PCL point object with these coordinates
     pcl::PointXYZ clickedPoint(x, y, z);
-    // cout << "\n=================================================" << endl;
     cout << "\nPoint Clicked at: (" << x << ", " << y << ", " << z << ")" << endl;
 
     // Step 3: Process based on how many points we already have
 
-    if (selectedPoints.size() < 2) // we need two points total
+    if (selectedPoints.size() <= 2) // we need two points total
     {
         // Add current point to our list
         selectedPoints.push_back(clickedPoint);
@@ -155,11 +156,17 @@ void pointPickingCallback(const pcl::visualization::PointPickingEvent &event)
             // First point selected
             cout << "First point selected!" << endl;
             cout << "Now click on a second point..." << endl;
+
+            viewer->addSphere(clickedPoint, 0.02, 1.0, 0, 0, "sphere1");
         }
         else if (selectedPoints.size() == 2)
         {
             // Second point selected. Now calculate the Distance
             cout << "Second point selected!" << endl;
+
+            viewer->addSphere(clickedPoint, 0.02, 0.0, 1.0, 0, "sphere2");
+
+            viewer->addLine(selectedPoints[0], selectedPoints[1], 1.0, 0, 0, "line");
 
             float dx = selectedPoints[1].x - selectedPoints[0].x;
             float dy = selectedPoints[1].y - selectedPoints[0].y;
@@ -176,7 +183,21 @@ void pointPickingCallback(const pcl::visualization::PointPickingEvent &event)
 
             // Reset for next measurement
             cout << "Click two more points to measure again..." << endl;
+        }
+        else
+        {
             selectedPoints.clear();
+
+            viewer->removeShape("sphere1");
+            viewer->removeShape("sphere2");
+            viewer->removeShape("line");
+
+            selectedPoints.push_back(clickedPoint);
+
+            cout << "First point selected!" << endl;
+            cout << "Now click on a second point..." << endl;
+
+            viewer->addSphere(clickedPoint, 0.02, 1.0, 0, 0, "sphere1");
         }
     }
 }
@@ -189,6 +210,9 @@ int main()
 
     cout << "Enter the width(in millimeter): ";
     cin >> cubeWidth; // in millimeter
+
+    // For hide the VTK warnings.
+    vtkObject::GlobalWarningDisplayOff();
 
     float xyz[3];               // store the x,y,z co-ordinate values.
     int rgb[3] = {0, 127, 255}; // store the RGB color with red, green and blue values the range (0 - 255).
@@ -403,23 +427,20 @@ int main()
 
     // Create visualizer
     // pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("3D Cube"));
-    pcl::visualization::PCLVisualizer viewer("3D Cube");
+    viewer.reset(new pcl::visualization::PCLVisualizer("3D Cube"));
 
-    // viewer->addPointCloud<pcl::PointXYZRGB>(cloud, "cubecloud");
-    viewer.addPointCloud<pcl::PointXYZRGB>(cloud, "cubecloud");
+    // For adding Point Cloud to viewer
+    viewer->addPointCloud<pcl::PointXYZRGB>(cloud, "cubecloud");
 
     // Set point size for Point Cloud Points.
-    // viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cubecloud");
-    viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cubecloud");
+    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "cubecloud");
 
-    // viewer->registerPointPickingCallback(pointPickingCallback);
-    viewer.registerPointPickingCallback(pointPickingCallback);
+    viewer->registerPointPickingCallback(pointPickingCallback);
 
     cout << "\n*** INSTRUCTIONS ***" << std::endl;
     cout << "1. Shift + Click on any point to select it" << std::endl;
 
-    // viewer->spin();
-    viewer.spin();
+    viewer->spin();
     // while (!viewer->wasStopped())
     // {
     //     viewer->spinOnce(100);
