@@ -39,7 +39,7 @@ int main()
     passThroughXYZ.setInputCloud(cloudXYZ);
     passThroughXYZ.setFilterFieldName("x");
     passThroughXYZ.setFilterLimits(1, 5);
-    passThroughXYZ.setFilterLimitsNegative(true);
+    passThroughXYZ.setFilterLimitsNegative(false);
     passThroughXYZ.filter(filterCloudXYZ);
 
     pcl::io::savePCDFileASCII("filteredCloud.pcd", filterCloudXYZ);

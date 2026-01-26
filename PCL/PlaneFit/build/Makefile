@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL
+CMAKE_SOURCE_DIR = /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PlaneFit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/build
+CMAKE_BINARY_DIR = /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PlaneFit/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/build/CMakeFiles /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PlaneFit/build/CMakeFiles /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PlaneFit/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PlaneFit/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PCL
+# Target rules for targets named PlaneFit
 
 # Build rule for target.
-PCL: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PCL
-.PHONY : PCL
+PlaneFit: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PlaneFit
+.PHONY : PlaneFit
 
 # fast build rule for target.
-PCL/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PCL.dir/build.make CMakeFiles/PCL.dir/build
-.PHONY : PCL/fast
+PlaneFit/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlaneFit.dir/build.make CMakeFiles/PlaneFit.dir/build
+.PHONY : PlaneFit/fast
 
-test_pcl.o: test_pcl.cpp.o
-.PHONY : test_pcl.o
+plane_fit.o: plane_fit.cpp.o
+.PHONY : plane_fit.o
 
 # target to build an object file
-test_pcl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PCL.dir/build.make CMakeFiles/PCL.dir/test_pcl.cpp.o
-.PHONY : test_pcl.cpp.o
+plane_fit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlaneFit.dir/build.make CMakeFiles/PlaneFit.dir/plane_fit.cpp.o
+.PHONY : plane_fit.cpp.o
 
-test_pcl.i: test_pcl.cpp.i
-.PHONY : test_pcl.i
+plane_fit.i: plane_fit.cpp.i
+.PHONY : plane_fit.i
 
 # target to preprocess a source file
-test_pcl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PCL.dir/build.make CMakeFiles/PCL.dir/test_pcl.cpp.i
-.PHONY : test_pcl.cpp.i
+plane_fit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlaneFit.dir/build.make CMakeFiles/PlaneFit.dir/plane_fit.cpp.i
+.PHONY : plane_fit.cpp.i
 
-test_pcl.s: test_pcl.cpp.s
-.PHONY : test_pcl.s
+plane_fit.s: plane_fit.cpp.s
+.PHONY : plane_fit.s
 
 # target to generate assembly for a file
-test_pcl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PCL.dir/build.make CMakeFiles/PCL.dir/test_pcl.cpp.s
-.PHONY : test_pcl.cpp.s
+plane_fit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlaneFit.dir/build.make CMakeFiles/PlaneFit.dir/plane_fit.cpp.s
+.PHONY : plane_fit.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PCL"
-	@echo "... test_pcl.o"
-	@echo "... test_pcl.i"
-	@echo "... test_pcl.s"
+	@echo "... PlaneFit"
+	@echo "... plane_fit.o"
+	@echo "... plane_fit.i"
+	@echo "... plane_fit.s"
 .PHONY : help
 
 
