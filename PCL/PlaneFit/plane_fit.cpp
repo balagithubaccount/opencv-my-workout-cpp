@@ -1,15 +1,19 @@
 #include <iostream>
+#include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/filters/extract_indices.h>
 using namespace std;
 using namespace pcl;
 
-int main()
+int main(int argc, char *argv[])
 {
     // Point Cloud Object
     PointCloud<PointXYZ>::Ptr cloud(new PointCloud<PointXYZ>);
+    PointCloud<PointXYZ>::Ptr planeCloud(new PointCloud<PointXYZ>);
+    PointCloud<PointXYZ>::Ptr objectCloud(new PointCloud<PointXYZ>);
 
     // Sample Data
     cloud->width = 15;
@@ -23,6 +27,15 @@ int main()
         point.z = 1.0;
     }
 
+    if (argc > 1)
+    {
+        if (io::loadPCDFile(argv[1], *cloud) == -1)
+        {
+            cout << "could not load the pcd file: " << argv[1] << endl;
+        }
+    }
+
+    // Store the Plane coefficients x,y,z and d values (ax + by + cz + d = 0)
     ModelCoefficients::Ptr coefficients(new ModelCoefficients);
     PointIndices::Ptr inliers(new PointIndices);
 
@@ -31,7 +44,7 @@ int main()
     seg.setOptimizeCoefficients(true);
     seg.setModelType(SACMODEL_PLANE);
     seg.setMethodType(SAC_RANSAC);
-    seg.setDistanceThreshold(0.01);
+    seg.setDistanceThreshold(0.002);    // Distance in meter
 
     seg.setInputCloud(cloud);
     seg.segment(*inliers, *coefficients);
@@ -48,6 +61,26 @@ int main()
              << coefficients->values[1] << "y + "
              << coefficients->values[2] << "z + "
              << coefficients->values[3] << " = 0" << endl;
+
+        // for (int ind = 0; ind < inliers->indices.size(); ind++)
+        // {
+        //     planeCloud->push_back(cloud->points[inliers->indices[ind]]);
+        // }
+        // cout << "planeCloud size: " << planeCloud->width << ", " << planeCloud->height << endl;
+
+        ExtractIndices<PointXYZ> extract;
+
+        extract.setInputCloud(cloud);
+        extract.setIndices(inliers);
+
+        extract.setNegative(false);
+        extract.filter(*planeCloud);
+
+        extract.setNegative(true);
+        extract.filter(*objectCloud);
+
+        io::savePCDFileASCII("PlaneCloud.pcd", *planeCloud);
+        io::savePCDFileASCII("ObjectCloud.pcd", *objectCloud);
     }
 
     return 0;
