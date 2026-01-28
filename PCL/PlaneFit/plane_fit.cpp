@@ -5,6 +5,7 @@
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
 #include <pcl/filters/extract_indices.h>
+#include <pcl/filters/passthrough.h>
 using namespace std;
 using namespace pcl;
 
@@ -14,6 +15,7 @@ int main(int argc, char *argv[])
     PointCloud<PointXYZ>::Ptr cloud(new PointCloud<PointXYZ>);
     PointCloud<PointXYZ>::Ptr planeCloud(new PointCloud<PointXYZ>);
     PointCloud<PointXYZ>::Ptr objectCloud(new PointCloud<PointXYZ>);
+    PointCloud<PointXYZ>::Ptr passThroughCloud(new PointCloud<PointXYZ>);
 
     // Sample Data
     cloud->width = 15;
@@ -44,7 +46,7 @@ int main(int argc, char *argv[])
     seg.setOptimizeCoefficients(true);
     seg.setModelType(SACMODEL_PLANE);
     seg.setMethodType(SAC_RANSAC);
-    seg.setDistanceThreshold(0.002);    // Distance in meter
+    seg.setDistanceThreshold(0.002); // Distance in meter
 
     seg.setInputCloud(cloud);
     seg.segment(*inliers, *coefficients);
@@ -82,6 +84,16 @@ int main(int argc, char *argv[])
         io::savePCDFileASCII("PlaneCloud.pcd", *planeCloud);
         io::savePCDFileASCII("ObjectCloud.pcd", *objectCloud);
     }
+
+    PassThrough<PointXYZ> passThrough;
+    passThrough.setInputCloud(cloud);
+    passThrough.setFilterFieldName("x");
+    passThrough.setFilterLimits(-0.1, 0.3);
+    // passThrough.setNegative(true);
+    passThrough.setFilterLimitsNegative(true);
+    passThrough.filter(*passThroughCloud);
+
+    io::savePCDFileASCII("passThroughCloud.pcd", *passThroughCloud);
 
     return 0;
 }

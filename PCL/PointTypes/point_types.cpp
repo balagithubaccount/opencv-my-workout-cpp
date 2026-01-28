@@ -60,5 +60,29 @@ int main()
 
     pcl::io::savePCDFileASCII("cloudXYZRGB.pcd", cloudXYZRGB);
 
+    pcl::PointCloud<pcl::PointXYZHSV> cloudXYZHSV;
+    cloudXYZHSV.resize(5);
+    pcl::io::savePCDFileASCII("cloudXYZHSV.pcd", cloudXYZHSV);
+
+    pcl::PointCloud<pcl::PointXYZINormal> cloudXYZINormal;
+    cloudXYZINormal.resize(5);
+    pcl::io::savePCDFileASCII("cloudXYZINormal.pcd", cloudXYZINormal);
+
+    pcl::PointCloud<pcl::PointXYZL> cloudXYZL;
+    cloudXYZL.resize(5);
+    pcl::io::savePCDFileASCII("cloudXYZL.pcd", cloudXYZL);
+
+    pcl::PointCloud<pcl::PointXYZRGBA> cloudXYZRGBA;
+    cloudXYZRGBA.resize(5);
+    pcl::io::savePCDFileASCII("cloudXYZRGBA.pcd", cloudXYZRGBA);
+
+    pcl::PointCloud<pcl::_PointXYZI> cloudXYZRGBA;
+    cloudXYZRGBA.resize(5);
+    pcl::io::savePCDFileASCII("cloudXYZRGBA.pcd", cloudXYZRGBA);
+
+    pcl::PointCloud<pcl::_PointXYZNormal> cloudXYZRGBA;
+    cloudXYZRGBA.resize(5);
+    pcl::io::savePCDFileASCII("cloudXYZRGBA.pcd", cloudXYZRGBA);
+
     return 0;
 }

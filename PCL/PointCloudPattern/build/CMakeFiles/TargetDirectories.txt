@@ -1,0 +1,3 @@
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/build/CMakeFiles/PointCloudPattern.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/build/CMakeFiles/edit_cache.dir
+/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/build/CMakeFiles/rebuild_cache.dir
