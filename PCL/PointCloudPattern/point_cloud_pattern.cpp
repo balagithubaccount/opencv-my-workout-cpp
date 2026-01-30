@@ -84,7 +84,7 @@ void findPattern(PointCloud<PointXYZ>::Ptr &cloud)
             seg.setOptimizeCoefficients(true);
             seg.setModelType(SACMODEL_PLANE);
             seg.setMethodType(SAC_RANSAC);
-            seg.setDistanceThreshold(0.002); // Distance in meter (0.2 cm)
+            seg.setDistanceThreshold(0.02); // Distance in meter (0.2 cm)
 
             seg.setInputCloud(pCloud);
             seg.segment(*inliers, *coefficients);
@@ -120,7 +120,7 @@ void findPattern(PointCloud<PointXYZ>::Ptr &cloud)
     cout << "\nPassThrough Size\tX\tY\tZ\tD" << endl;
     for (auto &pc : PlaneCoefficientsList)
     {
-        cout << pc.size << "\t";
+        cout << pc.size << " x " << pc.size << "\t";
         for (auto &val : pc.modelCoefficients->values)
         {
             cout << val << "\t";
