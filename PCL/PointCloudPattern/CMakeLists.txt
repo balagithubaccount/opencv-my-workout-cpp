@@ -10,7 +10,8 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 # Add the executable target
-add_executable(PointCloudPattern point_cloud_pattern.cpp)
+# add_executable(PointCloudPattern point_cloud_pattern.cpp)
+add_executable(PointCloudPattern point_cloud_analysis.cpp)
 
 # Link the executable with the OpenCV Libraries
 target_link_libraries(PointCloudPattern ${PCL_LIBRARIES})

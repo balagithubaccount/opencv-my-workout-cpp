@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o"
-  "CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o.d"
+  "CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o"
+  "CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o.d"
   "PointCloudPattern"
   "PointCloudPattern.pdb"
 )

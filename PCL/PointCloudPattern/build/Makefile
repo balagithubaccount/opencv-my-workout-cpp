@@ -129,29 +129,29 @@ PointCloudPattern/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/build
 .PHONY : PointCloudPattern/fast
 
-point_cloud_pattern.o: point_cloud_pattern.cpp.o
-.PHONY : point_cloud_pattern.o
+point_cloud_analysis.o: point_cloud_analysis.cpp.o
+.PHONY : point_cloud_analysis.o
 
 # target to build an object file
-point_cloud_pattern.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o
-.PHONY : point_cloud_pattern.cpp.o
+point_cloud_analysis.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o
+.PHONY : point_cloud_analysis.cpp.o
 
-point_cloud_pattern.i: point_cloud_pattern.cpp.i
-.PHONY : point_cloud_pattern.i
+point_cloud_analysis.i: point_cloud_analysis.cpp.i
+.PHONY : point_cloud_analysis.i
 
 # target to preprocess a source file
-point_cloud_pattern.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.i
-.PHONY : point_cloud_pattern.cpp.i
+point_cloud_analysis.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.i
+.PHONY : point_cloud_analysis.cpp.i
 
-point_cloud_pattern.s: point_cloud_pattern.cpp.s
-.PHONY : point_cloud_pattern.s
+point_cloud_analysis.s: point_cloud_analysis.cpp.s
+.PHONY : point_cloud_analysis.s
 
 # target to generate assembly for a file
-point_cloud_pattern.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.s
-.PHONY : point_cloud_pattern.cpp.s
+point_cloud_analysis.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudPattern.dir/build.make CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.s
+.PHONY : point_cloud_analysis.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PointCloudPattern"
-	@echo "... point_cloud_pattern.o"
-	@echo "... point_cloud_pattern.i"
-	@echo "... point_cloud_pattern.s"
+	@echo "... point_cloud_analysis.o"
+	@echo "... point_cloud_analysis.i"
+	@echo "... point_cloud_analysis.s"
 .PHONY : help
 
 

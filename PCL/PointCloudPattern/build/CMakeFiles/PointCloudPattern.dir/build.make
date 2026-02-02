@@ -69,28 +69,28 @@ include CMakeFiles/PointCloudPattern.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PointCloudPattern.dir/flags.make
 
-CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o: CMakeFiles/PointCloudPattern.dir/flags.make
-CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o: ../point_cloud_pattern.cpp
-CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o: CMakeFiles/PointCloudPattern.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o -MF CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o.d -o CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o -c /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/point_cloud_pattern.cpp
+CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o: CMakeFiles/PointCloudPattern.dir/flags.make
+CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o: ../point_cloud_analysis.cpp
+CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o: CMakeFiles/PointCloudPattern.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o -MF CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o.d -o CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o -c /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/point_cloud_analysis.cpp
 
-CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/point_cloud_pattern.cpp > CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.i
+CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/point_cloud_analysis.cpp > CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.i
 
-CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/point_cloud_pattern.cpp -o CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.s
+CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/PCL/PointCloudPattern/point_cloud_analysis.cpp -o CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.s
 
 # Object files for target PointCloudPattern
 PointCloudPattern_OBJECTS = \
-"CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o"
+"CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o"
 
 # External object files for target PointCloudPattern
 PointCloudPattern_EXTERNAL_OBJECTS =
 
-PointCloudPattern: CMakeFiles/PointCloudPattern.dir/point_cloud_pattern.cpp.o
+PointCloudPattern: CMakeFiles/PointCloudPattern.dir/point_cloud_analysis.cpp.o
 PointCloudPattern: CMakeFiles/PointCloudPattern.dir/build.make
 PointCloudPattern: /usr/lib/x86_64-linux-gnu/libpcl_apps.so
 PointCloudPattern: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so
