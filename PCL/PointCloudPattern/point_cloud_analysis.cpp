@@ -7,8 +7,12 @@
 #include <pcl/filters/passthrough.h>
 #include <pcl/filters/extract_indices.h>
 #include <pcl/common/common.h>
+#include <fstream>
+#include <iomanip>
 using namespace std;
 using namespace pcl;
+
+// ofstream outputFile("outputROIDetails_1.csv");
 
 // Analysis Point Cloud - ROI (PassThrough, PlaneFit, Depth, Angle, Inliers) (Limit values unit in meters)(ROI value in cm)
 void findROIDetails(PointCloud<PointXYZ>::Ptr &cloud, const int &roiSize,
@@ -110,12 +114,16 @@ void findROIDetails(PointCloud<PointXYZ>::Ptr &cloud, const int &roiSize,
 
         cout << "Along z axis slizing size(m): " << abs(depthFilterLimitMax - depthFilterLimitMin)
              << " (" << depthFilterLimitMin << " to " << depthFilterLimitMax << ") " << endl;
-        cout << "Range(RIO): " << range << " cm, Depth: " << depth << " m, Actual Depth: " << d << " m, Angle(Deg): " << angleDeg << endl;
+
+        cout << "Range(RIO): " << range << " cm, Depth: " << depth << " m, Actual Depth: " << d
+             << " m, Angle(Deg): " << angleDeg << ", a: " << a << ", b: " << b << ", c: " << c << endl;
+
+        // outputFile << range << "," << depth << "," << d << "," << angleDeg << "," << a << "," << b << "," << c << "\n";
 
         // Store the PCD file - Plane Fitted indices.
         if (pCloud->size() > 0)
         {
-            io::savePCDFileASCII("planeFit_" + range + ".pcd", *pCloud);
+            // io::savePCDFileASCII("planeFit_" + range + ".pcd", *pCloud);
         }
     }
     else
@@ -154,7 +162,7 @@ int main(int argc, char *argv[])
     cout << "Enter the max value for the Height(z): ";
     cin >> depthLimitMax;
 
-    if (depthLimitMin == depthLimitMax || depthLimitMin < minPoint.z || depthLimitMax > maxPoint.z)
+    if (depthLimitMin >= depthLimitMax)
     {
         cout << "Invalid Depth Limit Min or Max value: "
              << depthLimitMin << ", " << depthLimitMax << endl;
@@ -164,6 +172,18 @@ int main(int argc, char *argv[])
     // Find the Depth and Angle for the given ROI using PassThrough Filter and PlaneFit Segmentation.
     // arguments(pcd ground cloud, ROI value(cm), Depth Filter Limit min and max values(m))
     findROIDetails(cloud, stoi(argv[2]), depthLimitMin, depthLimitMax);
+
+    // Store the Depth, Angle and a,b,c plane equation coefficients values in csv file.
+    // if (outputFile.is_open())
+    // {
+    //     outputFile << "ROI, Depth, ActualDepth, Angle(Deg), a, b, c\n";
+    // }
+
+    // for (int range = 30; range <= 100; range += 10)
+    //     findROIDetails(cloud, range, 2, 2.2);
+
+    // Close the Opened file
+    // outputFile.close();
 
     return 0;
 }

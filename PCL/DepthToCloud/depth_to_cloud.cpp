@@ -7,6 +7,7 @@ using namespace std;
 void depthToCloud(cv::Mat depthImage, pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, cv::Mat Qmatrix)
 {
     cv::Mat depth;
+
     depthImage.convertTo(depth, CV_64F);
 
     /*
@@ -60,7 +61,7 @@ int main(int argc, char *argv[])
     }
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
-    cv::Mat depthImage = cv::imread(argv[1], cv::IMREAD_UNCHANGED); // Depth Image file
+    cv::Mat depthImage = cv::imread(argv[1], cv::IMREAD_UNCHANGED); // Depth Image file .PFM 
 
     if (depthImage.empty())
     {
