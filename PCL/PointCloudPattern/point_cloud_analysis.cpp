@@ -110,7 +110,7 @@ void findROIDetails(PointCloud<PointXYZ>::Ptr &cloud, const int &roiSize,
 
         // 3. Angle Calculation
         float angleRad = acos(abs(c)) / normal;
-        float angleDeg = (angleRad) * (180 / M_PI);
+        float angleDeg = (angleRad) * (180 / M_PI); ```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
         cout << "Along z axis slizing size(m): " << abs(depthFilterLimitMax - depthFilterLimitMin)
              << " (" << depthFilterLimitMin << " to " << depthFilterLimitMax << ") " << endl;

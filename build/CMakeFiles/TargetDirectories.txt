@@ -1,3 +1,0 @@
-/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/build/CMakeFiles/DepthToCloud.dir
-/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/build/CMakeFiles/edit_cache.dir
-/home/bxr02/Documents/Balasaravanan/GitHub/opencv-my-workout-cpp/build/CMakeFiles/rebuild_cache.dir
